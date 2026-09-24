@@ -66,6 +66,7 @@ export const projects = [
     title: 'Deep Learning Image Classification',
     category: 'Applied AI',
     year: '2025',
+     image: '/Projects/classification.png',
     description:
       'Designed and trained convolutional neural networks using MATLAB and Python/PyTorch. Developed a custom CNN architecture, evaluated it on CIFAR-10 and extended experiments to Fashion-MNIST and SVHN, covering augmentation, hyperparameter tuning and rigorous model evaluation.',
     tags: ['Python', 'PyTorch', 'MATLAB', 'CNN', 'CIFAR-10', 'Data Augmentation', 'Model Evaluation'],
@@ -76,6 +77,7 @@ export const projects = [
     title: 'MPEG Video Processing & Digital Watermarking',
     category: 'Multimedia Signal Processing',
     year: '2025',
+    image: '/Projects/mpeg.png',
     description:
       'Decoded MPEG video streams and reconstructed intra/inter frames using motion vectors and quantization matrices. Implemented scrambling/descrambling and digital watermarking mechanisms, then analysed visual quality and robustness.',
     tags: ['MATLAB', 'MPEG', 'Video Coding', 'Motion Vectors', 'Quantization', 'Watermarking'],
@@ -86,6 +88,7 @@ export const projects = [
     title: 'LPC Vocoder: Speech Analysis & Synthesis',
     category: 'Speech Processing',
     year: '2024',
+    image: '/Projects/lpc.png',
     description:
       'Implemented a Linear Predictive Coding vocoder using the source-filter model, estimated LPC coefficients and reconstructed speech from a compact parametric representation. Studied model order, spectral accuracy and perceptual quality.',
     tags: ['MATLAB', 'LPC', 'Speech Processing', 'Source-Filter Model', 'Spectral Analysis'],
@@ -96,6 +99,7 @@ export const projects = [
     title: 'CO-OFDM Chain & 4G/LTE Simulation',
     category: 'Digital Communications',
     year: '2025',
+    image: '/Projects/co-ofdm.png',
     description:
       'Implemented and analysed OFDM communication chains with modulation, channel modelling and compensation. Evaluated transmission performance through communication metrics and constellation behaviour under different channel conditions.',
     tags: ['MATLAB', 'CO-OFDM', 'OFDM', '4G/LTE', 'QAM', 'BER', 'EVM', 'OSNR'],
@@ -105,6 +109,7 @@ export const projects = [
     title: 'Non-Stationary Signal Processing',
     category: 'Signal Processing',
     year: '2024',
+    image: '/Projects/non-stationary.png',
     description:
       'Applied DCT and Wavelet Packet Decomposition for compression and investigated interference suppression using the Wigner-Ville distribution and time-frequency representations.',
     tags: ['MATLAB', 'DCT', 'WPD', 'Wavelets', 'Wigner-Ville', 'Time-Frequency'],
@@ -114,6 +119,7 @@ export const projects = [
     title: 'Oscillatory Signal Acquisition with STM32',
     category: 'Embedded Systems',
     year: '2023',
+    image: '/Projects/stm32.png',
     description:
       'Built an embedded acquisition chain using ADC sampling, timers, asynchronous UART interfaces and DMA-based transfers for efficient signal capture and debugging.',
     tags: ['STM32', 'C', 'ARM Cortex', 'ADC', 'UART', 'DMA', 'STM32CubeIDE'],
@@ -123,6 +129,7 @@ export const projects = [
     title: 'FPGA-Based Stepper Motor Control',
     category: 'Digital Hardware',
     year: '2024',
+    image: '/Projects/fpga.png',
     description:
       'Developed VHDL modules and testbenches, then completed functional simulation, placement-and-routing, timing analysis, implementation and validation.',
     tags: ['FPGA', 'VHDL', 'Xilinx', 'Testbench', 'Timing Analysis'],
@@ -132,6 +139,7 @@ export const projects = [
     title: 'Hand Movement Recognition Embedded System',
     category: 'Sensors & Robotics',
     year: '2024',
+    image: '/Projects/hand-movement.png',
     description:
       'Designed an embedded gesture interface around an MPU6050 IMU, including accelerometer/gyroscope acquisition, I²C communication, microcontroller processing and real-time LCD display.',
     tags: ['Arduino', 'C/C++', 'MPU6050', 'IMU', 'I²C', 'Sensors'],
@@ -142,27 +150,91 @@ export const projects = [
 export const skills = [
   {
     title: 'RF & Electromagnetics',
-    items: ['Ansys HFSS', 'CST Studio Suite', 'VNA Measurements', 'RF Characterization', 'Microwave Structures']
+    items: [
+      'Ansys HFSS',
+      'CST Studio Suite',
+      'VNA Measurements',
+      'RF Characterization',
+      'Microwave Structures'
+    ],
+    image: '/skills/rf.png',
+    accent: 'rgba(0, 120, 170, 0.45)'
   },
+
   {
     title: 'Signal Processing',
-    items: ['MATLAB', 'Python', 'FFT / STFT', 'Wavelets', 'DCT / WPD', 'Matched Filtering', 'Spectral Analysis']
+    items: [
+      'MATLAB',
+      'Python',
+      'FFT / STFT',
+      'Wavelets',
+      'DCT / WPD',
+      'Matched Filtering',
+      'Spectral Analysis'
+    ],
+    image: '/skills/signal-processing.png',
+    accent: 'rgba(61, 64, 180, 0.45)'
   },
+
   {
     title: 'Embedded & Hardware',
-    items: ['STM32', 'FPGA', 'VHDL', 'Verilog', 'Arduino', 'ADC', 'DMA', 'UART', 'I²C']
+    items: [
+      'STM32',
+      'FPGA',
+      'VHDL',
+      'Verilog',
+      'Arduino',
+      'ADC',
+      'DMA',
+      'UART',
+      'I²C'
+    ],
+    image: '/skills/embedded-systems.png',
+    accent: 'rgba(0, 140, 120, 0.45)'
   },
+
   {
     title: 'AI & Data',
-    items: ['PyTorch', 'TensorFlow / Keras', 'CNN', 'Image Classification', 'Data Augmentation', 'Model Evaluation']
+    items: [
+      'PyTorch',
+      'TensorFlow / Keras',
+      'CNN',
+      'Image Classification',
+      'Data Augmentation',
+      'Model Evaluation'
+    ],
+    image: '/skills/applied-ai.png',
+    accent: 'rgba(0, 110, 140, 0.45)'
   },
+
   {
     title: 'Electronics & Instrumentation',
-    items: ['Analog / Digital Electronics', 'Sensors', 'PCB Design', 'Altium Designer', 'Proteus', 'LabVIEW']
+    items: [
+      'Analog / Digital Electronics',
+      'Sensors',
+      'PCB Design',
+      'Altium Designer',
+      'Proteus',
+      'LabVIEW'
+    ],
+    image: '/skills/pcb.png',
+    accent: 'rgba(0, 110, 140, 0.45)'
   },
+
   {
     title: 'Programming',
-    items: ['Python', 'MATLAB', 'C', 'C++', 'C#', 'VHDL', 'Bash', 'Java']
+    items: [
+      'Python',
+      'MATLAB',
+      'C',
+      'C++',
+      'C#',
+      'VHDL',
+      'Bash',
+      'Java'
+    ],
+    image: '/skills/progra.png',
+    accent: 'rgba(0, 110, 140, 0.45)'
   }
 ];
 
@@ -190,5 +262,8 @@ export const education = [
 export const certification = {
   year: '2026',
   title: 'Applications of AI for Anomaly Detection',
-  issuer: 'NVIDIA'
+  issuer: 'NVIDIA',
+  image: '/skills/nvidia-cert.png',
+  accent: 'rgba(20, 50, 55, 0.55)',
+  featured: true
 };

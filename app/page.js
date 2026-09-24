@@ -4,7 +4,46 @@ import ProjectCard from '@/components/ProjectCard';
 import ExperienceCard from '@/components/ExperienceCard';
 import Reveal from '@/components/Reveal';
 import { profile, highlights, experiences, projects, skills, education, certification } from '@/data/portfolio';
+function SkillCard({ skill }) {
+  if (!skill) return null;
 
+  return (
+    <article className="skill-visual-card reveal">
+
+      <div
+        className="skill-visual-bg"
+        style={{
+          backgroundImage: `url("${skill.image}")`,
+        }}
+      />
+
+      <div
+        className="skill-visual-overlay"
+        style={{
+          background: `linear-gradient(
+            180deg,
+            rgba(8, 28, 34, 0.05) 0%,
+            ${skill.accent || 'rgba(0, 120, 140, 0.45)'} 55%,
+            rgba(7, 26, 31, 0.90) 100%
+          )`,
+        }}
+      />
+
+      <div className="skill-visual-content">
+
+        <h3>{skill.title}</h3>
+
+        <div className="skill-visual-items">
+          {skill.items?.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
+
+      </div>
+
+    </article>
+  );
+}
 export default function Home() {
   return (
     <main id="top">
@@ -87,21 +126,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="section-pad soft-section">
-        <div className="container">
-          <SectionTitle eyebrow="Toolkit" title="Technical skills" text="Tools and methods used across modelling, implementation, measurement and validation." />
-          <div className="skills-grid">
-            {skills.map((group) => (
-              <div className="skill-card reveal" key={group.title}>
-                <h3>{group.title}</h3>
-                <div className="skill-list">
-                  {group.items.map((item) => <span key={item}>{item}</span>)}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<section id="skills" className="section-pad soft-section">
+  <div className="container">
+
+    <SectionTitle
+      eyebrow="Toolkit"
+      title="Technical skills"
+      text="Tools and methods used across modelling, implementation, measurement and validation."
+    />
+
+    <div className="skills-visual-grid">
+
+      {skills.map((skill) => (
+        <SkillCard
+          key={skill.title}
+          skill={skill}
+        />
+      ))}
+
+    </div>
+
+  </div>
+</section>
 
       <section id="education" className="section-pad">
         <div className="container">
@@ -115,12 +161,38 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <aside className="cert-card reveal">
-              <span className="eyebrow">Certification</span>
-              <div className="cert-mark">NVIDIA</div>
-              <h3>{certification.title}</h3>
-              <p>{certification.issuer} · {certification.year}</p>
-            </aside>
+<aside className="cert-card cert-image-card reveal">
+
+  <div
+    className="cert-background"
+    style={{
+      backgroundImage: `url("${certification.image}")`,
+    }}
+  />
+
+  <div className="cert-overlay" />
+
+  <div className="cert-content">
+
+    <span className="cert-label">
+      Certification
+    </span>
+
+    <div className="cert-mark">
+      NVIDIA
+    </div>
+
+    <h3>
+      {certification.title}
+    </h3>
+
+    <p>
+      {certification.issuer} · {certification.year}
+    </p>
+
+  </div>
+
+</aside>
           </div>
         </div>
       </section>
